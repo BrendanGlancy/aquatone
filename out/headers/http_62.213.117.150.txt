@@ -1,9 +1,0 @@
-200 OK
-Content-Type: text/html
-Last-Modified: Wed, 27 Mar 2019 21:05:42 GMT
-Accept-Ranges: bytes
-Etag: "748954d6e0e4d41:0"
-Server: Microsoft-IIS/8.5
-Date: Sat, 26 Apr 2025 04:58:34 GMT
-Retry-Count: 0
-Content-Length: 701
