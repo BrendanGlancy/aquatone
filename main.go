@@ -4,11 +4,11 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"io"
 	"net/url"
 	"os"
 	"strings"
 	"time"
-	"io"
 
 	"github.com/google/uuid"
 	"github.com/shelld3v/aquatone/agents"
@@ -69,7 +69,7 @@ func main() {
 	sess.Out.Important("%s v%s started at %s\n\n", core.Name, core.Version, sess.Stats.StartedAt.Format(time.RFC3339))
 
 	if sess.Options.SessionPath != "" {
-		jsonSession, err := ioutil.ReadFile(sess.Options.SessionPath)
+		jsonSession, err := os.ReadFile(sess.Options.SessionPath)
 		if err != nil {
 			sess.Out.Fatal("Unable to read session file at %s: %s\n", sess.Options.SessionPath, err)
 			os.Exit(1)
@@ -85,7 +85,7 @@ func main() {
 		sess.Out.Important("Generating HTML report...")
 		var template []byte
 		if sess.Options.TemplatePath != "" {
-			template, err = ioutil.ReadFile(sess.Options.TemplatePath)
+			template, err = os.ReadFile(sess.Options.TemplatePath)
 		} else {
 			template, err = sess.Asset("static/report_template.html")
 		}
@@ -230,7 +230,7 @@ func main() {
 	sess.Out.Important("Generating HTML report...")
 	var template []byte
 	if sess.Options.TemplatePath != "" {
-		template, err = ioutil.ReadFile(sess.Options.TemplatePath)
+		template, err = os.ReadFile(sess.Options.TemplatePath)
 	} else {
 		template, err = sess.Asset("static/report_template.html")
 	}
