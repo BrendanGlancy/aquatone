@@ -3,7 +3,7 @@ package agents
 import (
 	"context"
 	"fmt"
-	"io/ioutil"
+	"os"
 	"strconv"
 	"strings"
 	"time"
@@ -145,7 +145,7 @@ func (a *URLScreenshotter) screenshotPage(p *core.Page) {
 		return
 	}
 
-	if err := ioutil.WriteFile(a.session.GetFilePath(filePath), pic, 0700); err != nil {
+	if err := os.WriteFile(a.session.GetFilePath(filePath), pic, 0700); err != nil {
 		a.session.Out.Debug("[%s] Screenshot failed for %s: %v\n", a.ID(), p.URL, err)
 		a.session.Stats.IncrementScreenshotFailed()
 		a.session.Out.Error("%s: %s\n", p.URL, Red("screenshot failed"))

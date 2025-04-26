@@ -140,7 +140,7 @@ func main() {
 	var targets []string
 	if sess.Options.Nmap {
 		parser := parsers.NewNmapParser()
-		targets, err = parser.Parse(reader)
+		targets, err = parser.Parse(reader, sess.Ports)
 		if err != nil {
 			sess.Out.Fatal("Unable to parse input as Nmap/Masscan XML: %s\n", err)
 			os.Exit(1)

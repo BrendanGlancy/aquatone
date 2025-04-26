@@ -57,6 +57,8 @@ func ParseOptions() (Options, error) {
 	flag.StringVar(&opts.MatchCodes, "match-codes", "", "Filter hosts that do not return any of these HTTP status codes (seperated by commas)")
 	flag.StringVar(&opts.FilterCodes, "filter-codes", "", "Filter hosts that return any of these HTTP status codes (seperated by commas)")
 	flag.StringVar(&opts.FilterString, "filter-string", "", "Filter host thats have this string in the response body")
+    // MARK
+    // actual default ports
 	flag.StringVar(&opts.Ports, "ports", "80,443,8080,8443", "Ports to scan on hosts. Supported list aliases: small, medium, large, xlarge")
 	flag.StringVar(&opts.ThumbnailSize, "thumbnail-size", "", "Screenshot thumbnail size (format: width,height)")
 	flag.StringVar(&opts.InputFile, "input-file", "", "Input file to parse hosts (Nmap or Raw) rather than STDIN")

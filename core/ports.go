@@ -1,5 +1,7 @@
 package core
 
+// options for this should be,
+// this fallback
 var (
 	SmallPortList = []int{80, 443}
 
@@ -17,3 +19,9 @@ var (
 		9090, 9091, 9200, 9443, 9800, 9981, 12443, 16080, 18091, 18092,
 		20720, 28017}
 )
+
+// nmap output default
+var ()
+
+// user supplied file
+var ()

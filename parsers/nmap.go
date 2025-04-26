@@ -1,8 +1,9 @@
 package parsers
 
 import (
+	"fmt"
 	"io"
-	"io/ioutil"
+	"slices"
 
 	"github.com/shelld3v/aquatone/core"
 
@@ -15,35 +16,38 @@ func NewNmapParser() *NmapParser {
 	return &NmapParser{}
 }
 
-func (p *NmapParser) Parse(r io.Reader) ([]string, error) {
+func (p *NmapParser) Parse(r io.Reader, allowedPorts []int) ([]string, error) {
 	var targets []string
-	bytes, err := ioutil.ReadAll(r)
+	bytes, err := io.ReadAll(r)
 	if err != nil {
-		return targets, err
+		return targets, nil
 	}
 	scan, err := nmap.Parse(bytes)
+
 	if err != nil {
-		return targets, err
+		return targets, nil
 	}
 
 	for _, host := range scan.Hosts {
-		urls := p.hostToURLs(host)
-		for _, url := range urls {
-			targets = append(targets, url)
+        var openAllowedPorts []nmap.Port
+		for _, port := range host.Ports {
+			if port.State.State == "open" && slices.Contains(allowedPorts, port.PortId) {
+                openAllowedPorts = append(openAllowedPorts, port)
+			}
 		}
+
+        if len(openAllowedPorts) > 0 {
+            urls := p.hostToURLs(host, openAllowedPorts)
+            targets = append(targets, urls...)
+        }
 	}
 
 	return targets, nil
 }
 
-func (p *NmapParser) hostToURLs(host nmap.Host) []string {
+func (p *NmapParser) hostToURLs(host nmap.Host, ports []nmap.Port) []string {
 	var urls []string
-	for _, port := range host.Ports {
-
-		if port.State.State != "open" {
-			continue
-		}
-
+	for _, port := range ports {
 		var protocol string
 		if port.Protocol == "tcp" {
 			if port.Service.Tunnel == "ssl" || port.Service.Name == "https" {
