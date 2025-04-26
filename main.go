@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/url"
 	"os"
 	"strings"
@@ -51,7 +50,7 @@ func main() {
 	}
 
 	if sess.Options.Version {
-		sess.Out.Info("%s v%s", core.Name, core.Version)
+		sess.Out.Info("%s v%s\n", core.Name, core.Version)
 		os.Exit(0)
 	}
 

@@ -17,8 +17,8 @@ import (
 	"time"
 
 	"github.com/asaskevich/EventBus"
-	"github.com/remeh/sizedwaitgroup"
 	"github.com/otiai10/copy"
+	"github.com/remeh/sizedwaitgroup"
 )
 
 type Stats struct {
@@ -185,7 +185,7 @@ func (s *Session) initPorts() {
 						os.Exit(1)
 					}
 
-					for i:= start_port; i <= end_port; i++ {
+					for i := start_port; i <= end_port; i++ {
 						if i < 1 || i > 65535 {
 							s.Out.Fatal("Invalid port give: %v\n", i)
 							os.Exit(1)
@@ -331,15 +331,20 @@ func NewSession() (*Session, error) {
 		}
 	}
 
-	if session.Options.Offline  {
+	if session.Options.Offline {
 		session.Options.TemplatePath = "static/report_template_local.html"
-		err := copy.Copy("static/js_local_files", session.Options.OutDir + "/js_local_files")
+		err := copy.Copy("static/js_local_files", session.Options.OutDir+"/js_local_files")
 		if err != nil {
 			return nil, fmt.Errorf("Error while copying static files: %s", err)
-        	}
+		}
 	}
 
 	session.Version = Version
+
+	if session.Options.Version {
+		return &session, nil
+	}
+
 	session.Start()
 
 	return &session, nil

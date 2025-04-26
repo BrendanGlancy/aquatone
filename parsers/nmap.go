@@ -45,8 +45,8 @@ func (p *NmapParser) hostToURLs(host nmap.Host) []string {
 		}
 
 		var protocol string
-		if port.Protocol == "tcp" && (port.Service.Name == "http" || port.Service.Name == "http-alt") {
-			if port.Service.Tunnel == "ssl" {
+		if port.Protocol == "tcp" {
+			if port.Service.Tunnel == "ssl" || port.Service.Name == "https" {
 				protocol = "https"
 			} else {
 				protocol = "http"
