@@ -1,0 +1,566 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.94SVN scan initiated Fri Apr 25 22:04:03 2025 as: nmap -sS -n -Pn -&#45;open -p21,22,53,80,81,443,8000,8080,8090,8443,8880,8888 -iL IPs.txt -T4 -vv -&#45;open -oA newtest -->
+<nmaprun scanner="nmap" args="nmap -sS -n -Pn -&#45;open -p21,22,53,80,81,443,8000,8080,8090,8443,8880,8888 -iL IPs.txt -T4 -vv -&#45;open -oA newtest" start="1745633043" startstr="Fri Apr 25 22:04:03 2025" version="7.94SVN" xmloutputversion="1.05">
+<scaninfo type="syn" protocol="tcp" numservices="12" services="21-22,53,80-81,443,8000,8080,8090,8443,8880,8888"/>
+<verbose level="2"/>
+<debugging level="0"/>
+<taskbegin task="SYN Stealth Scan" time="1745633043"/>
+<taskend task="SYN Stealth Scan" time="1745633047" extrainfo="492 total ports"/>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="141.94.89.245" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="9">
+<extrareasons reason="reset" count="9" proto="tcp" ports="21-22,53,81,8000,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="122460" rttvar="14206" to="179284"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="52.230.224.89" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="10">
+<extrareasons reason="no-response" count="10" proto="tcp" ports="21-22,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="107"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="107"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="39812" rttvar="29965" to="159672"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="66.33.60.35" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="10">
+<extrareasons reason="no-response" count="10" proto="tcp" ports="21-22,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="241"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="240"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="20655" rttvar="16111" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="45.60.22.221" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1" proto="tcp" ports="22"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="25548" rttvar="3010" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633047"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="102.133.219.136" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="10">
+<extrareasons reason="no-response" count="10" proto="tcp" ports="21-22,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="98"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="98"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="262417" rttvar="112655" to="713037"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="54.197.229.45" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="10">
+<extrareasons reason="no-response" count="10" proto="tcp" ports="21-22,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="243"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="243"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="29780" rttvar="22353" to="119192"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="162.241.30.175" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="7">
+<extrareasons reason="reset" count="7" proto="tcp" ports="81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="74810" rttvar="6819" to="102086"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="47.90.99.141" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="44"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="230458" rttvar="58275" to="463558"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.18.32.126" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="19751" rttvar="8536" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="107.178.252.1" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="27352" rttvar="3610" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="34.49.106.132" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="26027" rttvar="4011" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="107.154.235.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1" proto="tcp" ports="22"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="139206" rttvar="29139" to="255762"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="183.120.181.36" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="11">
+<extrareasons reason="reset" count="11" proto="tcp" ports="21-22,53,80-81,443,8000,8080,8090,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="41"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="202386" rttvar="19922" to="282074"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.16.75.225" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="17436" rttvar="9187" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="45.8.211.134" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="17910" rttvar="8676" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="185.204.93.240" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="9">
+<extrareasons reason="reset" count="9" proto="tcp" ports="21-22,53,81,8000,8080,8090,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="88073" rttvar="15810" to="151313"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.23.107.87" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="27016" rttvar="9517" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="204.116.26.192" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="11">
+<extrareasons reason="no-response" count="11" proto="tcp" ports="21-22,53,80-81,443,8000,8080,8090,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="50"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="41952" rttvar="41952" to="209760"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="74.83.226.214" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="11">
+<extrareasons reason="no-response" count="11" proto="tcp" ports="21-22,53,80-81,443,8000,8080,8090,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="49"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="39937" rttvar="39937" to="199685"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="34.209.105.17" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="98275" rttvar="55315" to="319535"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="149.139.34.68" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="11">
+<extrareasons reason="reset" count="11" proto="tcp" ports="21,53,80-81,443,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="143342" rttvar="18020" to="215422"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="193.144.42.173" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="43"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="137762" rttvar="59887" to="377310"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="107.20.119.194" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="114"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="115"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="115"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="38694" rttvar="26162" to="143342"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="195.111.72.188" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="8">
+<extrareasons reason="reset" count="8" proto="tcp" ports="21,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1" proto="tcp" ports="53"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="41"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="41"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="39"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="143722" rttvar="15313" to="204974"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="3.101.17.157" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="48"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="80036" rttvar="40517" to="242104"/>
+</host>
+<host starttime="1745633043" endtime="1745633047"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="3.108.65.173" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21,53,81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="46"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="230435" rttvar="98839" to="625791"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="74.208.209.184" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="8">
+<extrareasons reason="no-response" count="8" proto="tcp" ports="21,53,81,8000,8080,8090,8880,8888"/>
+</extraports>
+<extraports state="closed" count="3">
+<extrareasons reason="reset" count="3" proto="tcp" ports="80,443,8443"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="ssh" method="table" conf="3"/></port>
+</ports>
+<times srtt="52786" rttvar="25831" to="156110"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="95.216.0.152" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="10">
+<extrareasons reason="reset" count="10" proto="tcp" ports="21,53,80-81,443,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="41"/><service name="http-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="145192" rttvar="12972" to="197080"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="66.37.4.114" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="7">
+<extrareasons reason="reset" count="7" proto="tcp" ports="81,8000,8080,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="52"/><service name="https" method="table" conf="3"/></port>
+</ports>
+<times srtt="77493" rttvar="16836" to="144837"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.16.170.170" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="21605" rttvar="9253" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.17.218.166" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="54"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="14842" rttvar="8345" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633046"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="123.57.216.9" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21-22,53,81,8000,8090,8443,8880,8888"/>
+</extraports>
+<extraports state="closed" count="2">
+<extrareasons reason="reset" count="2" proto="tcp" ports="80,443"/>
+</extraports>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="39"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="223521" rttvar="99763" to="622573"/>
+</host>
+<host starttime="1745633043" endtime="1745633047"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="39.172.128.37" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="9">
+<extrareasons reason="no-response" count="9" proto="tcp" ports="21-22,53,81,8000,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="38"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="38"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="38"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="258008" rttvar="121518" to="744080"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="210.209.204.12" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="11">
+<extrareasons reason="reset" count="11" proto="tcp" ports="21-22,53,80-81,443,8000,8090,8443,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="108"/><service name="http-proxy" method="table" conf="3"/></port>
+</ports>
+<times srtt="236726" rttvar="17181" to="305450"/>
+</host>
+<host starttime="1745633043" endtime="1745633045"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="104.24.172.31" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="7">
+<extrareasons reason="no-response" count="7" proto="tcp" ports="21-22,53,81,8000,8090,8888"/>
+</extraports>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="51"/><service name="cddbp-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="22724" rttvar="8557" to="100000"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="65.109.39.153" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="closed" count="6">
+<extrareasons reason="reset" count="6" proto="tcp" ports="21,81,8000,8090,8880,8888"/>
+</extraports>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="42"/><service name="https-alt" method="table" conf="3"/></port>
+</ports>
+<times srtt="141047" rttvar="10602" to="183455"/>
+</host>
+<host starttime="1745633043" endtime="1745633044"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="34.95.107.238" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="22"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="ssh" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="117"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="53"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="26716" rttvar="5173" to="100000"/>
+</host>
+<taskbegin task="ARP Ping Scan" time="1745633047"/>
+<taskend task="ARP Ping Scan" time="1745633048" extrainfo="1 total hosts"/>
+<taskbegin task="SYN Stealth Scan" time="1745633048"/>
+<taskend task="SYN Stealth Scan" time="1745633051" extrainfo="12 total ports"/>
+<host starttime="1745633048" endtime="1745633051"><status state="up" reason="user-set" reason_ttl="0"/>
+<address addr="107.154.235.48" addrtype="ipv4"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="1">
+<extrareasons reason="no-response" count="1" proto="tcp" ports="22"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="ftp" method="table" conf="3"/></port>
+<port protocol="tcp" portid="53"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="domain" method="table" conf="3"/></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http" method="table" conf="3"/></port>
+<port protocol="tcp" portid="81"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="hosts2-ns" method="table" conf="3"/></port>
+<port protocol="tcp" portid="443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8000"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="http-proxy" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8090"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="opsmessaging" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8443"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="https-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8880"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="cddbp-alt" method="table" conf="3"/></port>
+<port protocol="tcp" portid="8888"><state state="open" reason="syn-ack" reason_ttl="47"/><service name="sun-answerbook" method="table" conf="3"/></port>
+</ports>
+<times srtt="243389" rttvar="258218" to="1250000"/>
+</host>
+<runstats><finished time="1745633051" timestr="Fri Apr 25 22:04:11 2025" summary="Nmap done at Fri Apr 25 22:04:11 2025; 43 IP addresses (42 hosts up) scanned in 8.18 seconds" elapsed="8.18" exit="success"/><hosts up="42" down="1" total="43"/>
+</runstats>
+</nmaprun>
