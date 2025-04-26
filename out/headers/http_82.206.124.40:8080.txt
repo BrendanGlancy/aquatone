@@ -1,0 +1,23 @@
+400 Bad Request
+Retry-Count: 0
+Content-Type: text/html;charset=utf-8
+X-Squid-Error: ERR_INVALID_URL 0
+Via: 1.1 ph-81abfd2a (squid)
+Content-Length: 3504
+Vary: Accept-Language
+Content-Language: en
+X-Cache: MISS from ph-81abfd2a
+Server: squid
+Mime-Version: 1.0
+Date: Sat, 26 Apr 2025 04:58:03 GMT
+Mime-Version: 1.0
+X-Cache: MISS from ph-81abfd2a
+Retry-Count: 0
+Server: squid
+Content-Type: text/html;charset=utf-8
+Content-Length: 3504
+X-Squid-Error: ERR_INVALID_URL 0
+Vary: Accept-Language
+Content-Language: en
+Via: 1.1 ph-81abfd2a (squid)
+Date: Sat, 26 Apr 2025 04:58:04 GMT

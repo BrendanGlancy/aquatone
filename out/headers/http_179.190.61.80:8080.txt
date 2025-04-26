@@ -1,0 +1,13 @@
+302 Found
+Date: Sat, 26 Apr 2025 04:58:04 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.5.38 mod_wsgi/3.4 Python/2.7.5
+Location: https://representantes.furacao.com.br/
+Content-Length: 222
+Retry-Count: 0
+Content-Type: text/html; charset=iso-8859-1
+Retry-Count: 0
+Content-Type: text/html; charset=iso-8859-1
+Date: Sat, 26 Apr 2025 04:58:04 GMT
+Server: Apache/2.4.6 (CentOS) OpenSSL/1.0.1e-fips mod_fcgid/2.3.9 PHP/5.5.38 mod_wsgi/3.4 Python/2.7.5
+Location: https://representantes.furacao.com.br/
+Content-Length: 222
